@@ -38,6 +38,13 @@ export default function Register() {
 
     // Capturing Form Data
     const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone,setphone] = useState("")
+    const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
+    const [Username,setusername] = useState("")
+    const [Userrole,setuserrole] = useState("")
     // console.log(firstname);
 
   return (
@@ -54,25 +61,25 @@ export default function Register() {
                             <div className="d-flex flex-row align-items-center mb-4 gap-2">
                                 <MDBIcon fas icon="user me-3" size='lg'/>
                                 <MDBInput label='Firstname' id='form1' type='text' className='w-100' value={firstname} onChange={(e)=> setFirstname(e.target.value)}/>
-                                <MDBInput label='Lastname' id='form1' type='text' className='w-100'/>
+                                <MDBInput label='Lastname' id='form1' type='text' className='w-100' value={lastname} onChange={(e)=> setLastname(e.target.value)} />
                             </div>
 
                             <div className="d-flex flex-row align-items-center mb-4 gap-2 wrap">
                                 <MDBIcon fas icon="envelope me-3" size='lg'/>
-                                <MDBInput label=' Email Address' id='form2' type='email'/>
-                                <MDBInput label=' Phone Number' id='form2' type='tel'/>
+                                <MDBInput label=' Email Address' id='form2' type='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                                <MDBInput label=' Phone Number' id='form2' type='tel' value={phone} onChange={(e) => setphone(e.target.value)}/>
                             </div>
 
                             <div className="d-flex flex-row align-items-center mb-4">
                                 <MDBIcon fas icon="lock me-3" size='lg'/>
-                                <MDBInput label='Password' id='form3' type='password'/>
-                                <MDBInput label='Repeat your password' id='form4' type='password'/>
+                                <MDBInput label='Password' id='form3' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+<MDBInput label='Repeat your password' id='form4' type='password' value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
                             </div>
 
                             <div className="d-flex flex-row align-items-center mb-4 gap-3">
                                 <MDBIcon fas icon="user me-3" size='lg'/>
-                                <MDBInput label='Username' id='form1' type='text' className='w-100'/>
-                                <select class="form-select" aria-label="Default select example">
+                                <MDBInput label='Username' id='form1' type='text' className='w-100' value={Username} onChange={(e) => setusername(e.target.value)}/>
+                                <select class="form-select" aria-label="Default select example" value={Userrole} onChange={(e) => setuserrole(e.target.value)}>
                                     <option selected>Select Your Role</option>
                                     <option value="user">User</option>
                                     <option value="vendor">Vender</option>
