@@ -14,7 +14,7 @@ import {
 }
 from 'mdb-react-ui-kit';
 import avatar from "../Assets/avatar.jpg";
-import Header from '../Compon';
+import Header from '../component/Header';
 
 export default function Register() {
     // Capturing the User DP Upload
